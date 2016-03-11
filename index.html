@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="adminApp">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>angular SPA项目实战 </title>
+
+  <!-- Bootstrap core CSS -->
+
+  <link href="src/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="src/fonts/css/font-awesome.min.css" rel="stylesheet">
+  <link href="src/css/animate.min.css" rel="stylesheet">
+  <link href='src/css/loading-bar.css' rel='stylesheet' />
+
+  <!-- Custom styling plus plugins -->
+  <link href="src/css/custom.css" rel="stylesheet">
+
+
+  <script src="src/js/angular.js"></script>
+  <script src="src/js/ngmodules/angular-ui-router.js"></script>
+  <script src="src/js/ngmodules/loading-bar.js"></script>
+  <script src="src/js/ngmodules/ocLazyLoad.min.js"></script>
+
+  <!-- paging.js 与 ngDialog.js 可以一开始就加载，也可以选择用的时候再加载  -->
+  <!-- <script src="src/js/ngmodules/ngDialog.js"></script> -->
+  <!-- <script src="src/js/ngmodules/paging.js"></script> -->
+
+  <script src="src/components/nav/nav.js"></script>
+  <script src="src/components/topbar/topbar.js"></script>
+  <script src="src/js/main.js"></script>
+  <script src="src/js/controller/admin.js"></script>
+
+</head>
+
+
+<body class="nav-md" ng-controller="adminCtrl">
+  <div class="container body">
+
+      <div class="main_container">
+            <div class="col-md-3 left_col">
+                <nav-list/>
+            </div>
+
+            <!-- 头部使用的 自定义指令组件 -->
+            <div class="top_nav">
+                <top-bar/>
+            </div>
+
+
+            <div class="right_col" role="main" style="height:{{height}}px">
+                <!--  ui-view  显示路由对应的模板 -->
+                <div class="row tile_count" ui-view> </div>
+
+
+                <!-- footer content -->
+                <footer>
+                    <div class="copyright-info">
+                        <p class="text-right">项目制作人  <a href="https://www.byex.cn" target="_blank"><strong>hishion</strong></a>  </p>
+                        <p class="text-right">本实例模板来自 <a href="https://colorlib.com" target="_blank">Colorlib</a>  </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
+
+            </div>
+      </div>
+
+  </div>
+
+</body>
+
+</html>

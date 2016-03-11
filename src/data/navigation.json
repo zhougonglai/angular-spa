@@ -1,0 +1,43 @@
+{
+    "list": [
+        {
+            "name": "主页",
+            "url": "dashboard",
+            "icon": "fa-home",
+            "child": [
+                
+            ]
+        },
+        {
+            "name": "用户",
+            "url": "",
+            "icon": "fa-user",
+            "child": [
+                {
+                    "name": "用户列表",
+                    "url": "user/list"
+                },
+                {
+                    "name": "添加用户",
+                    "url": "user/add"
+                }
+            ]
+        },
+        {
+            "name": "新闻",
+            "url": "",
+            "icon": "fa-list",
+            "child": [
+                {
+                    "name": "新闻列表",
+                    "url": "news/list"
+                },
+                {
+                    "name": "发布新闻",
+                    "url": "news/add"
+                }
+            ]
+        }
+    ],
+    "brandName": "SPA实战"
+}
