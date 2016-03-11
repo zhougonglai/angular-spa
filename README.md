@@ -3,13 +3,19 @@
 
 在线演示：[http://www.byex.cn/spa](http://www.byex.cn/spa/)
 
-主要用到 ui-router, ocLazyLoad, loading-bar, ngDialog 等指令与组件完成，包括table, form, 分页，等等。
 
+##涉及到 angular 以下知识
 
-##包括以下内容
+* 控制器        
+* 自定义指令    指令学习与编写
+* ui-router     路由配置
+* $http         与后台(模拟)数据交互的ajax
+* loading-bar   添加页面加载进度条。
+* ocLazyLoad    配合ui-router 动态加载所需js, css等文件，提供首页加载速度。
+* ngDialog      添加对话框互动效果。
+* paging        js分页
 
-* 指令功能
-* 动态加载控制器和所需组件，提高首次加载速度。
+模板采用 bootstrap 制作的 [https://github.com/puikinsh/gentelella](gentelella) 模板
 
 
 ##有问题反馈
