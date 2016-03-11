@@ -1,8 +1,9 @@
 
 #angular制作的SPA单页应用(更新中)
 
+在线演示：[http://www.byex.cn/spa](http://www.byex.cn/spa/)
 
-采用ui-router, ocLazyLoad, loading-bar, ngDialog 等指令与组件完成，包括table, form, 分页，等等。
+主要用到 ui-router, ocLazyLoad, loading-bar, ngDialog 等指令与组件完成，包括table, form, 分页，等等。
 
 
 ##包括以下内容
