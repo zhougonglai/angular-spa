@@ -14,12 +14,13 @@
   <link href="src/css/bootstrap.min.css" rel="stylesheet">
 
   <link href="src/fonts/css/font-awesome.min.css" rel="stylesheet">
-  <link href="src/css/animate.min.css" rel="stylesheet">
+  <link href="src/css/animate.css" rel="stylesheet">
   <link href='src/css/loading-bar.css' rel='stylesheet' />
 
   <!-- Custom styling plus plugins -->
   <link href="src/css/custom.css" rel="stylesheet">
 
+  <script src="src/js/jquery.js"></script>
 
   <script src="src/js/angular.js"></script>
   <script src="src/js/ngmodules/angular-ui-router.js"></script>
@@ -38,7 +39,7 @@
 </head>
 
 
-<body class="nav-md" ng-controller="adminCtrl">
+<body ng-class="{false: 'nav-md',true: 'nav-sm'}[isCollapse]" ng-controller="adminCtrl">
   <div class="container body">
 
       <div class="main_container">
@@ -56,7 +57,6 @@
                 <!--  ui-view  显示路由对应的模板 -->
                 <div class="row tile_count" ui-view> </div>
 
-
                 <!-- footer content -->
                 <footer>
                     <div class="copyright-info">
@@ -66,7 +66,6 @@
                     <div class="clearfix"></div>
                 </footer>
                 <!-- /footer content -->
-
             </div>
       </div>
 

@@ -24,17 +24,55 @@
             ]
         },
         {
-            "name": "新闻",
+            "name": "图表",
             "url": "",
-            "icon": "fa-list",
+            "icon": "fa-bar-chart-o",
             "child": [
                 {
-                    "name": "新闻列表",
-                    "url": "news/list"
+                    "name": "chart",
+                    "url": "chart/index"
+                }
+            ]
+        },
+        {
+            "name": "编辑器",
+            "url": "",
+            "icon": "fa-edit",
+            "child": [
+                {
+                    "name": "editor",
+                    "url": "editor/index"
+                }
+            ]
+        },
+        {
+            "name": "UI Elements",
+            "url": "",
+            "icon": "fa-desktop",
+            "child": [
+                {
+                    "name": "form",
+                    "url": "form/index"
                 },
                 {
-                    "name": "发布新闻",
-                    "url": "news/add"
+                    "name": "table",
+                    "url": "tables/index"
+                },
+                {
+                    "name": "calendar",
+                    "url": "calendar/index"
+                },
+                {
+                    "name": "file upload",
+                    "url": "file_upload/index"
+                },
+                {
+                    "name": "buttons",
+                    "url": "buttons/index"
+                },
+                {
+                    "name": "icons",
+                    "url": "icons/index"
                 }
             ]
         }

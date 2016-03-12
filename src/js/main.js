@@ -94,21 +94,15 @@ angular.module('adminApp', ['ui.router','oc.lazyLoad', 'angular-loading-bar', 'n
             )
 
             
-            .state('news/list', _G.getRouteOptions({
-                    module: 'news', 
-                    operation: 'add'
+            .state('chart/index', _G.getRouteOptions({
+                    module: 'chart', 
+                    operation: 'index'
                 })
             )
             
-            .state('news/add', _G.getRouteOptions({
-                    module: 'news', 
-                    operation: 'add'
-                })
-            )
-            .state('news/edit', _G.getRouteOptions({
-                    module: 'news', 
-                    operation: 'edit',
-                    params: ':id'
+            .state('editor/index', _G.getRouteOptions({
+                    module: 'editor', 
+                    operation: 'index'
                 })
             )
 
