@@ -48,20 +48,36 @@ var _G = {
                 }]
             }
         }
+    },
+
+    loadScript: function(url, callback){
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        //IE
+        if(script.readystate){
+            script.onreadystatechange = function(){
+                if(script.readystate == "loaded" || script.readystate == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            }
+        }else{
+            script.onload = function(){
+                callback();
+            }
+        }
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
     }
 }
 
-angular.module('adminApp', ['ui.router','oc.lazyLoad', 'angular-loading-bar', 'nav', 'topbar'])
+angular.module('adminApp', ['ui.router','oc.lazyLoad', 'angular-loading-bar', 'nav', 'topbar', 'simditor', 'textAngular'])
     .config(function($stateProvider, $urlRouterProvider, $locationProvider, cfpLoadingBarProvider){
         //此处关闭了 html5模式
         //$locationProvider.html5Mode(true);
         cfpLoadingBarProvider.includeSpinner = true;
         //配置路由
         $stateProvider
-            /*.state('dashboard',{
-                url: '/dashboard/',
-                templateUrl: _G.getTemplate('dashboard')
-            })*/
             .state('user/list', _G.getRouteOptions({
                     module: 'user', 
                     operation: 'list',
@@ -89,20 +105,49 @@ angular.module('adminApp', ['ui.router','oc.lazyLoad', 'angular-loading-bar', 'n
             )
             .state('dashboard', _G.getRouteOptions({
                     module: 'dashboard',
-                    files: ['http://echarts.baidu.com/dist/echarts.min.js']
+                    files: [
+                        'src/js/plugins/echarts.min.js'
+                    ]
+                })
+            )
+            
+            .state('editor', _G.getRouteOptions({
+                    module: 'editor',
+                    files:  [
+                        'src/components/simditor/simditor.css',
+                        'src/components/simditor/font-awesome.css',
+                        'src/components/simditor/simditor/simditor-all.js',
+                        'src/components/simditor/angular-editor.js',
+
+                        'src/components/textAngular/textAngular.css'
+                    ]
                 })
             )
 
-            
-            .state('chart/index', _G.getRouteOptions({
-                    module: 'chart', 
-                    operation: 'index'
+            .state('calendar', _G.getRouteOptions({
+                    module: 'calendar',
+                    files: [
+                        'src/components/datepicker/angular-datepicker.css',
+                        'src/components/datepicker/angular-datepicker.js'
+                    ]
+                })
+            )
+
+            .state('file_upload', _G.getRouteOptions({
+                    module: 'file_upload',
+                    files: [
+                        'src/js/ngmodules/angular-file-upload.js'
+                    ]
+                })
+            )
+
+            .state('buttons', _G.getRouteOptions({
+                    module: 'buttons'
                 })
             )
             
-            .state('editor/index', _G.getRouteOptions({
-                    module: 'editor', 
-                    operation: 'index'
+            .state('icons', _G.getRouteOptions({
+                    module: 'icons'
                 })
             )
 

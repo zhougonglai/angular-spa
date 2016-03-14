@@ -4186,8 +4186,6 @@ html > body > .ui-pnotify {
 
 .chart {
     position: relative;
-    display: inline-block;
-    width: 100px;
     height: 100px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -6381,12 +6379,16 @@ ul.notifications {
 
 
 
-/* chart */
+.minPanel,
 .chart{
     height: 320px;
 }
 
 
 .child_menu{
+    display: none;
+}
+
+.ta-hidden-input{
     display: none;
 }

@@ -9,6 +9,8 @@ angular.module('adminApp')
             maxinum: 5
         };
 
+        var listCache = [];
+
         //分页跳转
         $scope.toJump = function(idx, size){
             $scope.data.pageIdx = idx;
@@ -19,7 +21,7 @@ angular.module('adminApp')
         //ajax请求 获取数据
         $http.get(getUser).success(function(res){
             //更新数据
-            $scope.data.list = res.list;
+            $scope.data.list = listCache = res.list;
             //结束加载条
             cfpLoadingBar.complete();
 
@@ -63,6 +65,20 @@ angular.module('adminApp')
             $state.go('user/edit', {id: id});
         };
 
+
+
+        $scope.search = function(){
+            var val = angular.element('#keywords').val().replace(/^\s+|\s+$/, '');
+            var reg = new RegExp(val);
+            var list = [];
+
+            angular.forEach(listCache, function(item, index){
+                if(item.name.search(reg) > -1){
+                    list.push(item)
+                }
+            });
+            $scope.data.list = list;
+        }
 
 
     }])

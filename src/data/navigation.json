@@ -24,24 +24,13 @@
             ]
         },
         {
-            "name": "图表",
-            "url": "",
-            "icon": "fa-bar-chart-o",
-            "child": [
-                {
-                    "name": "chart",
-                    "url": "chart/index"
-                }
-            ]
-        },
-        {
             "name": "编辑器",
             "url": "",
             "icon": "fa-edit",
             "child": [
                 {
                     "name": "editor",
-                    "url": "editor/index"
+                    "url": "editor"
                 }
             ]
         },
@@ -51,28 +40,20 @@
             "icon": "fa-desktop",
             "child": [
                 {
-                    "name": "form",
-                    "url": "form/index"
-                },
-                {
-                    "name": "table",
-                    "url": "tables/index"
-                },
-                {
                     "name": "calendar",
-                    "url": "calendar/index"
+                    "url": "calendar"
                 },
                 {
                     "name": "file upload",
-                    "url": "file_upload/index"
+                    "url": "file_upload"
                 },
                 {
                     "name": "buttons",
-                    "url": "buttons/index"
+                    "url": "buttons"
                 },
                 {
                     "name": "icons",
-                    "url": "icons/index"
+                    "url": "icons"
                 }
             ]
         }
