@@ -4,7 +4,7 @@
 在线演示：[http://www.byex.cn/spa](http://www.byex.cn/spa/)
 
 
-##涉及到 angular 以下知识
+##涉及到 angular 以下知识及相关内容
 
 * 控制器        
 * 自定义指令    指令学习与编写
@@ -14,6 +14,13 @@
 * ocLazyLoad    配合ui-router 动态加载所需js, css等文件，提供首页加载速度。
 * ngDialog      添加对话框互动效果。
 * paging        js分页
+* datepicker    日历与时间控件
+* textAngular   富文本编辑器
+* simditor      富文本编辑器
+* echarts       图表
+* file upload   文件上传
+* buttons       按钮ui
+* icons         字体图标
 
 模板采用 bootstrap 制作的 [https://github.com/puikinsh/gentelella](gentelella) 模板
 
